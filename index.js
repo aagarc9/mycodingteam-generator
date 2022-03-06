@@ -7,6 +7,7 @@ const Manager = require("./lib/Manager");
 const Engineer = require("./lib/Engineer");
 const Intern = require("./lib/Intern");
 
+// creating arrays to push functions
 const manager = [];
 const engineer = [];
 const intern = [];
@@ -30,13 +31,13 @@ function memberQuestions() {
         },
         {
             type: 'list',
-            name: 'postion',
+            name: 'position',
             message:"What is the employee's role?",
             choices: ['Manager', 'Engineer', 'Intern']
         },
     ])
-    .then(({employee, id, email, postion}) => {
-        if (postion === 'Manager') {
+    .then(({employee, id, email, position}) => {
+        if (position === 'Manager') {
             return inquirer.prompt([
                 {
                     type:'text',
@@ -58,7 +59,7 @@ function memberQuestions() {
                     return memberQuestions();
                 }
             })
-        } else if (postion === 'Engineer') {
+        } else if (position === 'Engineer') {
             return inquirer.prompt([
                 {
                     type:'text',
@@ -80,7 +81,7 @@ function memberQuestions() {
                     return memberQuestions();
                 }
             })
-        } else if (postion === 'Intern') {
+        } else if (position === 'Intern') {
             return inquirer.prompt([
                 {
                     type:'text',
