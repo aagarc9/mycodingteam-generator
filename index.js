@@ -7,8 +7,9 @@ const Manager = require("./lib/Manager");
 const Engineer = require("./lib/Engineer");
 const Intern = require("./lib/Intern");
 
-const manager = []
-const engineer = []
+const manager = [];
+const engineer = [];
+const intern = [];
 
 function memberQuestions() {
     return inquirer.prompt ([
@@ -79,8 +80,29 @@ function memberQuestions() {
                     return memberQuestions();
                 }
             })
+        } else if (postion === 'Intern') {
+            return inquirer.prompt([
+                {
+                    type:'text',
+                    name:'school',
+                    message: "What is the Intern's school?"
+                },
+                {
+                    type:'confirm',
+                    name:'newEmployee',
+                    message: "What you like to add another employee?",
+                    default: false  
+                }
+            ])
+            .then(({school, newEmployee}) => {
+                intern.push(new Intern(employee, id, email, school))
+                if (newEmployee) {
+                    return memberQuestions();
+                }
+            })
         }
     })
-}
+};
 
 memberQuestions()
+ 
