@@ -2,15 +2,19 @@
 const inquirer = require('inquirer')
 const fs = require('fs');
 const path = require('path');
+
 // Importing files with functions
 const Manager = require("./lib/Manager");
 const Engineer = require("./lib/Engineer");
 const Intern = require("./lib/Intern");
+const pageLayout = require('./src/pageLayout');
+const writeFile = require('./src/generateHTML')
 
 // creating arrays to push functions
 const manager = [];
 const engineer = [];
 const intern = [];
+const employeeA = {manager, engineer, intern}
 
 function memberQuestions() {
     return inquirer.prompt ([
@@ -106,4 +110,9 @@ function memberQuestions() {
 };
 
 memberQuestions()
- 
+.then(answers => {
+    return pageLayout(employeeA)
+})
+.then(generateHTML => {
+    return writeFile(generateHTML)
+})
