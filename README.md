@@ -29,9 +29,9 @@ WHEN I decide to finish building my team
 THEN I exit the application, and the HTML is generated  
 
 ## Demo
-
+<img width="933" alt="Capture" src="https://user-images.githubusercontent.com/92004832/157148838-05d4a6ef-3da0-40ee-ae7e-65d66e4029fb.PNG">
 
 ## Terminal Demo
-
+<img width="544" alt="Capture2" src="https://user-images.githubusercontent.com/92004832/157148867-433533fe-ef48-4255-8cf1-0388bd507f88.PNG">
 
 
