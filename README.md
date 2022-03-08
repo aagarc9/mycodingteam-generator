@@ -34,4 +34,5 @@ THEN I exit the application, and the HTML is generated
 ## Terminal Demo
 <img width="544" alt="Capture2" src="https://user-images.githubusercontent.com/92004832/157148867-433533fe-ef48-4255-8cf1-0388bd507f88.PNG">
 
-
+## Video Walkthrough
+https://www.youtube.com/watch?v=qpQ6dBc4zFs
